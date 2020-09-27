@@ -2,7 +2,7 @@
 {
     public class RandomNumberFunction : Function<IntegerExpression>
     {
-        public override string Template { get { return "Random integer between (@Value1) and (@Value2)"; } }
+        public override string Template { get { return "Random integer between @Value1 and @Value2"; } }
 
         private readonly IntegerExpression value1 = new IntegerExpression(name: "Value1");
         private readonly IntegerExpression value2 = new IntegerExpression(name: "Value2");

@@ -4,7 +4,7 @@ namespace ExpEditor.Core
 {
     public class WaitAction : Action
     {
-        public override string Template { get { return "Wait (@Value)"; } }
+        public override string Template { get { return "Wait(@Value)"; } }
 
         private readonly FloatExpression value = new FloatExpression(name: "Value");
 

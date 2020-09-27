@@ -2,7 +2,7 @@
 {
     public class IntegerToStringFunction : Function<StringExpression>
     {
-        public override string Template { get { return "String (@Value)"; } }
+        public override string Template { get { return "String(@Value)"; } }
 
         private readonly IntegerExpression value = new IntegerExpression(name: "Value");
 

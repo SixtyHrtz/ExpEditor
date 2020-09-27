@@ -4,7 +4,7 @@ namespace ExpEditor.Core
 {
     public class MinFunction : Function<IntegerExpression>
     {
-        public override string Template { get { return "Min (@Value1, @Value2)"; } }
+        public override string Template { get { return "Min(@Value1, @Value2)"; } }
 
         private readonly IntegerExpression value1 = new IntegerExpression(name: "Value1");
         private readonly IntegerExpression value2 = new IntegerExpression(name: "Value2");

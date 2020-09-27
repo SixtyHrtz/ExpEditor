@@ -2,7 +2,7 @@
 {
     public class StringToIntegerFunction : Function<IntegerExpression>
     {
-        public override string Template { get { return "Integer (@String)"; } }
+        public override string Template { get { return "Integer(@String)"; } }
 
         private readonly StringExpression text = new StringExpression(name: "String");
 

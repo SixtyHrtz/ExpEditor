@@ -20,7 +20,7 @@
         public override IExpression Expression => new StringExpression("/", "/");
     }
 
-    public class ModularConstant : Constant<OperatorExpression>
+    public class ModuloConstant : Constant<OperatorExpression>
     {
         public override IExpression Expression => new StringExpression("%", "%");
     }

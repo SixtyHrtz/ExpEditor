@@ -21,7 +21,7 @@ namespace ExpEditor.Core
                 case OperatorExpressionType.Minus: Constant = new MinusConstant(); break;
                 case OperatorExpressionType.Multiply: Constant = new MultiplyConstant(); break;
                 case OperatorExpressionType.Divide: Constant = new DivideConstant(); break;
-                case OperatorExpressionType.Modular: Constant = new ModularConstant(); break;
+                case OperatorExpressionType.Modulo: Constant = new ModuloConstant(); break;
             }
         }
     }

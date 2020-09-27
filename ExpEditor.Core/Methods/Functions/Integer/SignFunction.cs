@@ -4,7 +4,7 @@ namespace ExpEditor.Core
 {
     public class SignFunction : Function<IntegerExpression>
     {
-        public override string Template { get { return "Sign (@Value)"; } }
+        public override string Template { get { return "Sign(@Value)"; } }
 
         private readonly IntegerExpression value = new IntegerExpression(name: "Value");
 

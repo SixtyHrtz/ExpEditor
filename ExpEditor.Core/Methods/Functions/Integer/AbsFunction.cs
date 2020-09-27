@@ -4,7 +4,7 @@ namespace ExpEditor.Core
 {
     public class AbsFunction : Function<IntegerExpression>
     {
-        public override string Template { get { return "Abs (@Value)"; } }
+        public override string Template { get { return "Abs(@Value)"; } }
 
         private readonly IntegerExpression value = new IntegerExpression(name: "Value");
 

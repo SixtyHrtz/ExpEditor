@@ -2,7 +2,7 @@
 {
     public class SubstringFunction : Function<StringExpression>
     {
-        public override string Template { get { return "Substring (@String, @From, @To)"; } }
+        public override string Template { get { return "Substring(@String, @From, @To)"; } }
 
         private readonly StringExpression text = new StringExpression(name: "String");
         private readonly IntegerExpression from = new IntegerExpression(name: "From");

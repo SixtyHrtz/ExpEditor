@@ -14,7 +14,7 @@ namespace ExpEditor.Core
                 new ConstantInfo<MinusConstant>("-"),
                 new ConstantInfo<MultiplyConstant>("*"),
                 new ConstantInfo<DivideConstant>("/"),
-                new ConstantInfo<ModularConstant>("%")
+                new ConstantInfo<ModuloConstant>("%")
             };
         }
 

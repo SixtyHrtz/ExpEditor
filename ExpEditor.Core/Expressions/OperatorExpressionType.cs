@@ -7,6 +7,6 @@
         Minus,
         Multiply,
         Divide,
-        Modular
+        Modulo
     }
 }

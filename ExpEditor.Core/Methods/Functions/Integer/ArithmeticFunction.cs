@@ -18,7 +18,7 @@
                 case OperatorExpressionType.Minus: return new IntegerExpression(value1 - value2);
                 case OperatorExpressionType.Multiply: return new IntegerExpression(value1 * value2);
                 case OperatorExpressionType.Divide: return new IntegerExpression(value1 / value2);
-                case OperatorExpressionType.Modular: return new IntegerExpression(value1 % value2);
+                case OperatorExpressionType.Modulo: return new IntegerExpression(value1 % value2);
                 default: return null;
             }
         }
