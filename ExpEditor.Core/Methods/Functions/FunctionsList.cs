@@ -12,24 +12,29 @@ namespace ExpEditor.Core
             Functions = new List<IFunctionInfo>()
             {
                 // Boolean
-                new FunctionInfo<AndFunction>("And"),
+                new FunctionInfo<BooleanAndFunction>("And"),
+                new FunctionInfo<BooleanOrFunction>("Or"),
+                // Float
+                new FunctionInfo<FloatAbsFunction>("Abs"),
+                new FunctionInfo<FloatArithmeticFunction>("Arithmetic"),
                 // Integer
-                new FunctionInfo<AbsFunction>("Abs"),
-                new FunctionInfo<ArithmeticFunction>("Arithmetic"),
-                new FunctionInfo<BitAndFunction>("Bit And"),
-                new FunctionInfo<BitOrFunction>("Bit Or"),
-                new FunctionInfo<BitXorFunction>("Bit Xor"),
-                new FunctionInfo<FloatToIntegerFunction>("Convert Float To Integer"),
-                new FunctionInfo<MaxFunction>("Max"),
-                new FunctionInfo<MinFunction>("Min"),
-                new FunctionInfo<RandomNumberFunction>("Random Number"),
-                new FunctionInfo<SignFunction>("Sign"),
-                new FunctionInfo<StringLengthFunction>("String Length"),
-                new FunctionInfo<StringToIntegerFunction>("Convert String To Integer"),
+                new FunctionInfo<IntegerAbsFunction>("Abs"),
+                new FunctionInfo<IntegerArithmeticFunction>("Arithmetic"),
+                new FunctionInfo<IntegerBitAndFunction>("Bit And"),
+                new FunctionInfo<IntegerBitOrFunction>("Bit Or"),
+                new FunctionInfo<IntegerBitXorFunction>("Bit Xor"),
+                new FunctionInfo<IntegerFromFloatFunction>("Convert Float To Integer"),
+                new FunctionInfo<IntegerFromStringFunction>("Convert String To Integer"),
+                new FunctionInfo<IntegerMaxFunction>("Max"),
+                new FunctionInfo<IntegerMinFunction>("Min"),
+                new FunctionInfo<IntegerRandomFunction>("Random Number"),
+                new FunctionInfo<IntegerSignFunction>("Sign"),
+                new FunctionInfo<IntegerStringLengthFunction>("String Length"),
                 // String
-                new FunctionInfo<ConcatenateStringsFunction>("Concatenate Strings"),
-                new FunctionInfo<IntegerToStringFunction>("Convert Integer To String"),
-                new FunctionInfo<SubstringFunction>("Substring")
+                new FunctionInfo<StringConcatenateFunction>("Concatenate Strings"),
+                new FunctionInfo<StringFromFloatFunction>("Convert Float To String"),
+                new FunctionInfo<StringFromIntegerFunction>("Convert Integer To String"),
+                new FunctionInfo<StringSubstringFunction>("Substring")
             };
 
             Functions = Functions

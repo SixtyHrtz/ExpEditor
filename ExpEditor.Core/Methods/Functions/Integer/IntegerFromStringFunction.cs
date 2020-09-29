@@ -1,12 +1,12 @@
 ﻿namespace ExpEditor.Core
 {
-    public class StringToIntegerFunction : Function<IntegerExpression>
+    public class IntegerFromStringFunction : Function<IntegerExpression>
     {
         public override string Template { get { return "Integer(@String)"; } }
 
         private readonly StringExpression text = new StringExpression(name: "String");
 
-        public StringToIntegerFunction() => SetExpressions(text);
+        public IntegerFromStringFunction() => SetExpressions(text);
 
         public override IExpression Evaluate()
         {

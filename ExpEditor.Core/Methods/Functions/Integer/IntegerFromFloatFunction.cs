@@ -1,12 +1,12 @@
 ﻿namespace ExpEditor.Core
 {
-    public class FloatToIntegerFunction : Function<IntegerExpression>
+    public class IntegerFromFloatFunction : Function<IntegerExpression>
     {
         public override string Template { get { return "Integer(@Value)"; } }
 
         private readonly FloatExpression value = new FloatExpression(name: "Value");
 
-        public FloatToIntegerFunction() => SetExpressions(value);
+        public IntegerFromFloatFunction() => SetExpressions(value);
 
         public override IExpression Evaluate() =>
             new IntegerExpression((int)value);

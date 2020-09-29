@@ -9,5 +9,12 @@ namespace ExpEditor.Core
             var random = new Random((int)DateTime.Now.Ticks);
             return random.Next(min, max + 1);
         }
+
+        public static float Random(float min, float max)
+        {
+            var random = new Random((int)DateTime.Now.Ticks);
+            var value01 = random.NextDouble();
+            return (float)(min + (value01 * (max - min)));
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ExpEditor.Core
 {
-    public class ArithmeticFunction : Function<IntegerExpression>
+    public class IntegerArithmeticFunction : Function<IntegerExpression>
     {
         public override string Template { get { return "(@Value1 @Sign @Value2)"; } }
 
@@ -8,7 +8,7 @@
         private readonly OperatorExpression sign = new OperatorExpression(name: "Sign");
         private readonly IntegerExpression value2 = new IntegerExpression(name: "Value2");
 
-        public ArithmeticFunction() => SetExpressions(value1, sign, value2);
+        public IntegerArithmeticFunction() => SetExpressions(value1, sign, value2);
 
         public override IExpression Evaluate()
         {
