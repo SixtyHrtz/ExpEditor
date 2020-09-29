@@ -17,6 +17,11 @@ namespace ExpEditor.Core
                 // Float
                 new FunctionInfo<FloatAbsFunction>("Abs"),
                 new FunctionInfo<FloatArithmeticFunction>("Arithmetic"),
+                new FunctionInfo<FloatFromIntegerFunction>("Convert Integer To Float"),
+                new FunctionInfo<FloatFromStringFunction>("Convert String To Float"),
+                new FunctionInfo<FloatMaxFunction>("Max"),
+                new FunctionInfo<FloatMinFunction>("Min"),
+                new FunctionInfo<FloatRandomFunction>("Random Number"),
                 // Integer
                 new FunctionInfo<IntegerAbsFunction>("Abs"),
                 new FunctionInfo<IntegerArithmeticFunction>("Arithmetic"),
