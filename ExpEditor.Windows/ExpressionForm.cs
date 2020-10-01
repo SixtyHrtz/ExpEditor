@@ -21,13 +21,6 @@ namespace ExpEditor.Windows
 
         private readonly List<LinkLabel> functionLinksList;
 
-        public static void ShowSubForm(IExpression expression)
-        {
-            var form = new ExpressionForm(expression);
-            form.ShowDialog();
-            form.Close();
-        }
-
         public ExpressionForm(IExpression expression)
         {
             InitializeComponent();
@@ -136,7 +129,12 @@ namespace ExpEditor.Windows
 
                 link.Click += (se, ea) =>
                 {
-                    ShowSubForm(expression);
+                    using (var form = new ExpressionForm(expression))
+                    {
+                        form.ShowDialog();
+                        form.Close();
+                    }
+
                     UpdateFunctionInfo();
                 };
 
@@ -151,7 +149,7 @@ namespace ExpEditor.Windows
             foreach (var link in functionLinksList)
             {
                 link.Text = ((IExpression)link.Tag).ToString();
-                link.Width = Helper.GetTextWidth(link.Text);
+                link.Width = link.Text.GetTextWidth();
             }
 
             lFunction.Text = function.Inspect();
@@ -190,6 +188,7 @@ namespace ExpEditor.Windows
                 expression.ExpressionType = ExpressionType.Value;
             }
 
+            DialogResult = DialogResult.OK;
             Close();
         }
     }

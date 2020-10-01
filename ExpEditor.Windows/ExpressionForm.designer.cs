@@ -44,7 +44,7 @@
             this.cbConstant.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConstant.FormattingEnabled = true;
             this.cbConstant.Location = new System.Drawing.Point(128, 15);
-            this.cbConstant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbConstant.Margin = new System.Windows.Forms.Padding(4);
             this.cbConstant.Name = "cbConstant";
             this.cbConstant.Size = new System.Drawing.Size(473, 24);
             this.cbConstant.TabIndex = 0;
@@ -54,11 +54,11 @@
             // 
             this.rbConstant.AutoSize = true;
             this.rbConstant.Location = new System.Drawing.Point(16, 16);
-            this.rbConstant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbConstant.Margin = new System.Windows.Forms.Padding(4);
             this.rbConstant.Name = "rbConstant";
-            this.rbConstant.Size = new System.Drawing.Size(99, 21);
+            this.rbConstant.Size = new System.Drawing.Size(85, 21);
             this.rbConstant.TabIndex = 1;
-            this.rbConstant.Text = "Константа";
+            this.rbConstant.Text = "Constant";
             this.rbConstant.UseVisualStyleBackColor = true;
             // 
             // cbFunction
@@ -66,7 +66,7 @@
             this.cbFunction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFunction.FormattingEnabled = true;
             this.cbFunction.Location = new System.Drawing.Point(128, 48);
-            this.cbFunction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbFunction.Margin = new System.Windows.Forms.Padding(4);
             this.cbFunction.Name = "cbFunction";
             this.cbFunction.Size = new System.Drawing.Size(473, 24);
             this.cbFunction.TabIndex = 2;
@@ -76,17 +76,17 @@
             // 
             this.rbFunction.AutoSize = true;
             this.rbFunction.Location = new System.Drawing.Point(16, 49);
-            this.rbFunction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbFunction.Margin = new System.Windows.Forms.Padding(4);
             this.rbFunction.Name = "rbFunction";
-            this.rbFunction.Size = new System.Drawing.Size(88, 21);
+            this.rbFunction.Size = new System.Drawing.Size(83, 21);
             this.rbFunction.TabIndex = 3;
-            this.rbFunction.Text = "Функция";
+            this.rbFunction.Text = "Function";
             this.rbFunction.UseVisualStyleBackColor = true;
             // 
             // lFunction
             // 
             this.lFunction.AutoSize = true;
-            this.lFunction.Location = new System.Drawing.Point(124, 78);
+            this.lFunction.Location = new System.Drawing.Point(125, 76);
             this.lFunction.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lFunction.Name = "lFunction";
             this.lFunction.Size = new System.Drawing.Size(65, 17);
@@ -96,7 +96,7 @@
             // flpFunction
             // 
             this.flpFunction.Location = new System.Drawing.Point(128, 97);
-            this.flpFunction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpFunction.Margin = new System.Windows.Forms.Padding(4);
             this.flpFunction.Name = "flpFunction";
             this.flpFunction.Size = new System.Drawing.Size(475, 198);
             this.flpFunction.TabIndex = 5;
@@ -104,7 +104,7 @@
             // tbValue
             // 
             this.tbValue.Location = new System.Drawing.Point(128, 305);
-            this.tbValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbValue.Margin = new System.Windows.Forms.Padding(4);
             this.tbValue.Name = "tbValue";
             this.tbValue.Size = new System.Drawing.Size(365, 22);
             this.tbValue.TabIndex = 6;
@@ -113,11 +113,11 @@
             // bSave
             // 
             this.bSave.Location = new System.Drawing.Point(503, 303);
-            this.bSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bSave.Margin = new System.Windows.Forms.Padding(4);
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(100, 28);
             this.bSave.TabIndex = 7;
-            this.bSave.Text = "Сохранить";
+            this.bSave.Text = "Save";
             this.bSave.UseVisualStyleBackColor = true;
             this.bSave.Click += new System.EventHandler(this.SaveClick);
             // 
@@ -126,12 +126,12 @@
             this.rbValue.AutoSize = true;
             this.rbValue.Checked = true;
             this.rbValue.Location = new System.Drawing.Point(16, 306);
-            this.rbValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbValue.Margin = new System.Windows.Forms.Padding(4);
             this.rbValue.Name = "rbValue";
-            this.rbValue.Size = new System.Drawing.Size(94, 21);
+            this.rbValue.Size = new System.Drawing.Size(65, 21);
             this.rbValue.TabIndex = 8;
             this.rbValue.TabStop = true;
-            this.rbValue.Text = "Значение";
+            this.rbValue.Text = "Value";
             this.rbValue.UseVisualStyleBackColor = true;
             // 
             // ExpressionForm
@@ -149,11 +149,11 @@
             this.Controls.Add(this.rbConstant);
             this.Controls.Add(this.cbConstant);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ExpressionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Expression Form";
+            this.Text = "Expression";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,6 +1,5 @@
 ﻿using ExpEditor.Core;
 using ExpEditor.Core.WinForms;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -8,55 +7,80 @@ namespace ExpEditor.Windows
 {
     public partial class MainForm : Form
     {
-        private IAction action;
+        private readonly Trigger testTrigger;
 
-        private readonly List<LinkLabel> actionLinksList;
+        private readonly TreeNode triggerNode;
 
         public MainForm()
         {
             InitializeComponent();
 
-            actionLinksList = new List<LinkLabel>();
+            ActionsList.Add(new ActionInfo<DisplayMessageAction>("Display Message"));
+
+            testTrigger = new Trigger
+            {
+                Name = "Test Trigger"
+            };
+
+            triggerNode = tvTrigger.Nodes.Add(testTrigger.ToString());
         }
 
-        private void MainFormLoad(object sender, System.EventArgs e)
+        private void NewActionClick(object sender, System.EventArgs e) =>
+            EditActionNode(-1);
+
+        private void TriggerNodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e) =>
+            EditActionNode(e.Node.Index);
+
+        private void EditActionNode(int nodeIndex)
         {
-            action = new DisplayMessageAction();
+            IAction action = null;
 
-            foreach (IExpression expression in action.Expressions)
+            if (nodeIndex != -1)
+                action = (IAction)triggerNode.Nodes[nodeIndex]?.Tag;
+
+            using (var form = new ActionForm(action))
             {
-                var link = new LinkLabel()
-                {
-                    Parent = flpExpressions,
-                    Tag = expression
-                };
+                form.ShowDialog();
+                form.Close();
 
-                link.Click += (se, ea) =>
-                {
-                    ExpressionForm.ShowSubForm(expression);
-                    UpdateActionInfo();
-                };
+                if (form.DialogResult != DialogResult.OK)
+                    return;
 
-                actionLinksList.Add(link);
+                if (nodeIndex == -1)
+                    AddNode(form.Action);
+                else
+                    UpdateNode(form.Action, nodeIndex);
             }
-
-            UpdateActionInfo();
         }
 
-        private void UpdateActionInfo()
+        private void AddNode(IAction action)
         {
-            foreach (var link in actionLinksList)
-            {
-                link.Text = ((IExpression)link.Tag).ToString();
-                link.Width = link.Text.GetTextWidth();
-            }
+            var newIndex = tvTrigger.SelectedNode.Index + 1;
+
+            if (newIndex < testTrigger.Actions.Count)
+                testTrigger.Actions.Insert(newIndex, action);
+            else
+                testTrigger.Actions.Add(action);
+
+            var actionNode = new TreeNode(action.ToString()) { Tag = action };
+            triggerNode.Nodes.Insert(newIndex, actionNode);
+        }
+
+        private void UpdateNode(IAction action, int nodeIndex)
+        {
+            testTrigger.Actions[nodeIndex] = action;
+
+            var actionNode = new TreeNode(action.ToString()) { Tag = action };
+            triggerNode.Nodes.RemoveAt(nodeIndex);
+            triggerNode.Nodes.Insert(nodeIndex, actionNode);
         }
 
         private async void ExecuteClick(object sender, System.EventArgs e)
         {
             await Task.Run(() =>
             {
-                action.Execute();
+                foreach (var action in testTrigger.Actions)
+                    action.Execute();
             });
         }
     }
