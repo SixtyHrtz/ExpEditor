@@ -12,7 +12,7 @@ namespace ExpEditor.Core
             Actions = new List<IActionInfo>()
             {
                 new ActionInfo<DoNothingAction>("Do Nothing"),
-                new ActionInfo<IfAction>("If"),
+                //new ActionInfo<IfAction>("If"),
                 new ActionInfo<TestAction>("Test"),
                 new ActionInfo<WaitAction>("Wait")
             };
