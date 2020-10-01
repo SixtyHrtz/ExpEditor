@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ExpEditor.WinForms
+namespace ExpEditor.Windows
 {
     static class Program
     {

@@ -1,9 +1,10 @@
 ﻿using ExpEditor.Core;
+using ExpEditor.Core.WinForms;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExpEditor.WinForms
+namespace ExpEditor.Windows
 {
     public partial class MainForm : Form
     {

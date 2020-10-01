@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace ExpEditor.WinForms
+namespace ExpEditor.Windows
 {
     public static class Helper
     {

@@ -1,7 +1,6 @@
-﻿using ExpEditor.Core;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
-namespace ExpEditor.WinForms
+namespace ExpEditor.Core.WinForms
 {
     public class DisplayMessageAction : Action
     {

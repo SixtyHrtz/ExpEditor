@@ -1,4 +1,4 @@
-﻿namespace ExpEditor.WinForms
+﻿namespace ExpEditor.Windows
 {
     partial class MainForm
     {

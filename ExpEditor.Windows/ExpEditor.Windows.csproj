@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DAF1D93E-BE4B-4298-8F1A-0B9DFB5E5AF4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ExpEditor.WinForms</RootNamespace>
-    <AssemblyName>ExpEditor.WinForms</AssemblyName>
+    <RootNamespace>ExpEditor.Windows</RootNamespace>
+    <AssemblyName>ExpEditor.Windows</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisplayMessageAction.cs" />
     <Compile Include="ExpressionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -91,6 +91,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExpEditor.Core.WinForms\ExpEditor.Core.WinForms.csproj">
+      <Project>{ee6e6d0d-d52c-4e95-9dfb-9da2da283b5f}</Project>
+      <Name>ExpEditor.Core.WinForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ExpEditor.Core\ExpEditor.Core.csproj">
       <Project>{F4117FDC-9049-4553-A913-EBC6DF246592}</Project>
       <Name>ExpEditor.Core</Name>

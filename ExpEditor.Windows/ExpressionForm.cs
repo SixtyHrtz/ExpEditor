@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace ExpEditor.WinForms
+namespace ExpEditor.Windows
 {
     // TODO : Сброс функции или значения в зависимости от типа при выходе
     // TODO : Фокус на значении по умолчании
